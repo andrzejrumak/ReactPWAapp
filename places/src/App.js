@@ -19,6 +19,9 @@ const Page = ({ title }) => (
         <Link to="/about">About</Link>
       </p>
       <p>
+        <Link to="/place">Add your place</Link>
+      </p>
+      <p>
         <Link to="/settings">Settings</Link>
       </p>
     </div>
@@ -32,6 +35,10 @@ const About = (props) => (
   <Page title="About"/>
 );
 
+const Place = (props) => (
+  <Page title="Add your place"/>
+);
+
 const Settings = (props) => (
   <Page title="Settings"/>
 );
@@ -42,6 +49,7 @@ class App extends Component {
       <Router history={browserHistory}>
         <Route path="/" component={Home}/>
         <Route path="/about" component={About}/>
+        <Route path="/place" component={Place}/>
         <Route path="/settings" component={Settings}/>
       </Router>
     );
